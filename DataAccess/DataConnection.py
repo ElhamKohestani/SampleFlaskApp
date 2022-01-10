@@ -10,7 +10,7 @@ class DbConnection:
         self._server = 'localhost\MSS12' 
         self._database = 'SampleDb' 
         self._username = 'sa' 
-        self._password = 'kasperskyantigeral' 
+        self._password = '' 
         self._cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+self._server+';DATABASE='+self._database+';UID='+self._username+';PWD='+ self._password, autocommit= False)
         self._cursor = self._cnxn.cursor()
     
