@@ -1,0 +1,44 @@
+{% extends 'layouts/siteLayout.html' %}
+
+{% block headContent %}
+<title>
+    Programs
+</title>
+{% endblock %}
+
+
+
+
+{% block pageTitle %}
+    Prgorams
+{% endblock %}
+
+{% block titleDesc %}
+  A sample of readonly page.
+{% endblock %}
+
+{% block bodyContent %}
+
+
+
+<table id="programs" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Abbreviation</th>
+            <th>Program Name</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        {% for program in programs %}
+        <tr>
+            <td>{{ program.Abbreviation}}</td>
+            <td>{{ program.Identifier }}</td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}
